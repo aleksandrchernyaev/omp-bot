@@ -39,7 +39,7 @@ func (c *DemoCommander) HandleCallback(callback *tgbotapi.CallbackQuery, callbac
 
 func (c *DemoCommander) HandleCommand(msg *tgbotapi.Message, commandPath path.CommandPath) {
 	switch commandPath.Subdomain {
-	case "subdomain":
+	case "cherniaev":
 		c.subdomainCommander.HandleCommand(msg, commandPath)
 	default:
 		log.Printf("DemoCommander.HandleCommand: unknown subdomain - %s", commandPath.Subdomain)

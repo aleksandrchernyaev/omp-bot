@@ -15,7 +15,7 @@ type CommandPath struct {
 var ErrUnknownCommand = errors.New("unknown command")
 
 func ParseCommand(commandText string) (CommandPath, error) {
-	commandParts := strings.SplitN(commandText, "__", 3)
+	commandParts := strings.SplitN(commandText, "_", 3)
 	if len(commandParts) != 3 {
 		return CommandPath{}, ErrUnknownCommand
 	}

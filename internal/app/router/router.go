@@ -166,7 +166,6 @@ func (c *Router) handleCallback(callback *tgbotapi.CallbackQuery) {
 func (c *Router) handleMessage(msg *tgbotapi.Message) {
 	if !msg.IsCommand() {
 		c.showCommandFormat(msg)
-
 		return
 	}
 
@@ -177,7 +176,7 @@ func (c *Router) handleMessage(msg *tgbotapi.Message) {
 	}
 
 	switch commandPath.Domain {
-	case "demo":
+	case "alex":
 		c.demoCommander.HandleCommand(msg, commandPath)
 	case "user":
 		break
